@@ -65,6 +65,8 @@ i {
 }
 
 p {
+    font-size: 1em;
+
     color:#F1F6F9;
     margin: .2em auto;
 }
@@ -103,3 +105,18 @@ ul {
 a {
     color: rgb(215, 162, 182);
 }
+@media (max-width: 767px) {
+    #mainContainer {
+      flex-direction: column; /* Stack on top of each other */
+      display: flex;
+
+    }
+  
+    #mainRight,
+    #mainLeft {
+      transform: none; /* Remove the horizontal translation */
+      width: 100%; float:left;
+
+    }
+  }
+
