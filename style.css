@@ -13,7 +13,10 @@ h1 {
     padding-top: 1em;
     padding-bottom: 0.5em;
     font-weight: 100;
-    color:#cf7c9a
+    color:#cf7c9a;
+    opacity: 0; /* Initially set opacity to 0 for the slide-in effect */
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 h2 {
@@ -68,16 +71,22 @@ p {
 
 hr {
     border: none;
-    background-color: lightgray;
+    background-color: #9BA4B5;
     height: 1px;
 }
 
 #mainLeft {
     width: 29%; float:left;
+    opacity: 0; /* Initially set opacity to 0 for the slide-in effect */
+    transform: translateX(-50px); /* Initially set translateX for the slide-in effect */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 #mainRight {
-    border-left: 1px solid lightgray;
-    width: 70%; float:right
+    border-left: 1px solid #9BA4B5;
+    width: 70%; float:right;
+    opacity: 0; /* Initially set opacity to 0 for the slide-in effect */
+    transform: translateX(50px); /* Slide in from the right */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 ul {
     list-style-type: circle;
