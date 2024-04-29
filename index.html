@@ -8,19 +8,42 @@
     <link href="style.css" rel="stylesheet">
     <title>Ana Carolina Pergentino</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Ana Carolina Pergentino</h1>
-        <hr>
-        <h2>Computer Engineer | Web Developer</h2>
-        <hr>
+        <p class="logo">AP</p>
+        <ul class="nav">
+            <li class="navlink"><a href="#">Home</a></li>
+            <li class="navlink"><a href="#skills">Skills</a></li>
+            <li class="navlink"><a href="#">About</a></li>
+            <li class="navlink"><a href="#">Projects</a></li>
+            <li class="navlink"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+        </div>
+
     </header>
-    <main  id="mainContainer">
+    <div id="title-page" class="orbitron">
+        <div id="earth"></div>
+
+        <div id="center">
+            <h1>ANA <br> PERGENTINO</h1>
+            <h2>Computer Engineer | Web Developer</h2>
+        </div>
+
+
+    </div>
+    <main id="mainContainer">
         <article id="mainLeft">
-            <section>
+            <section id="contact" class="vt323-regular">
                 <h3>CONTACT</h3>
                 <p>
                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -72,6 +95,13 @@
 
         </article>
         <article id="mainRight">
+            <section id="skills">
+                <h3>Skills</h3>
+
+                <div><p>JS</p></div><div class="skill-progress"></div>
+                <div><p>TS</p></div><div class="skill-progress"></div>
+                <div><p>Angular</p></div><div class="skill-progress"></div>
+            </section>
             <section>
                 <h3>ABOUT</h3>
                 <p>&emsp; I'm a Computer Engineer working in the software field, specializing in Frontend Development
