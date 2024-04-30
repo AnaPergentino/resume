@@ -23,6 +23,7 @@ body {
     background-position: 0 center, 50% 0;
 
 }
+
 /*FONTS*/
 .orbitron {
     font-family: "Orbitron", sans-serif;
@@ -30,15 +31,16 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .vt323-regular {
     font-family: "VT323", monospace;
     font-weight: 600;
     font-style: normal;
-  }
+}
 
 
 h1 {
-    font-size: 4em;
+    font-size: 5vw;
     letter-spacing: .1em;
     padding-top: 1em;
     padding-bottom: 0.5em;
@@ -53,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 4vw;
     letter-spacing: .05em;
     font-weight: 100;
     color: rgb(246, 78, 201, 60%);
@@ -101,14 +103,15 @@ header {
     background: #00000098;
     color: rgb(246, 78, 201, 70%);
     text-shadow: -1px 1px 0px #00e6e65a;
-    position: sticky;
     top: 0;
-    z-index: 1000; /* Adjust the z-index as needed */
+    z-index: 1000;
+    position: sticky;
+    /* Adjust the z-index as needed */
 }
 
 .logo {
     letter-spacing: 3px;
-    margin:3px;
+    margin: 3px;
 }
 
 .nav {
@@ -120,6 +123,7 @@ header {
 .navlink {
     list-style: none;
     margin: 0;
+    margin-right: 20px;
 }
 
 .navlink a {
@@ -133,15 +137,17 @@ header {
     font-size: 1.2em;
     display: none;
 }
+
 @media screen and (max-width: 678px) {
     .burger {
         display: block;
     }
+
     .nav {
         margin: 0;
         background: #00000098;
         position: absolute;
-        right: -100%;
+        right: -20%;
         top: 70px;
         width: 50%;
         height: calc(100% - 70px);
@@ -149,16 +155,22 @@ header {
         justify-content: space-around;
         padding: 0;
         transition: all 400ms;
-        
+        display: block;
     }
+
     .navlink {
         text-align: center;
+        margin-right: 0;
     }
 
     .nav-active {
         right: 0;
     }
+    .nav-collapsed {
+        visibility: hidden;
+    }
 }
+
 #title-page {
     height: 100%;
     width: 100%;
@@ -255,29 +267,31 @@ a {
 .logo {
     width: 0;
     height: 0;
-    border-bottom: 20px solid  rgb(246, 78, 201, 70%);
+    border-bottom: 20px solid rgb(246, 78, 201, 70%);
     border-right: 20px solid transparent;
-  }
+}
 
-  .skill-progress{
-        width: 200px;
-        height: 10px;
-        background: linear-gradient(90deg, transparent 10%, var(--c2) 10%);
-        border: solid rgb(60, 174, 32, 30%);
-  }
-  #earth {
+.skill-progress {
+    width: 200px;
+    height: 10px;
+    background: linear-gradient(90deg, transparent 10%, var(--c2) 10%);
+    border: solid rgb(60, 174, 32, 30%);
+}
+
+#earth {
     /* [1] Allow it to contain the absolutely positions pseudo-elements (later-on) */
     position: relative;
-  
+
     /* [2] Set-up the dimensions and spacing */
     width: 300px;
     height: 300px;
     margin: 3em auto;
-  
+
     /* [3] Prepare the animation effects */
     transition: transform 200ms linear;
-    animation: rotate 4s linear infinite; /* This is going to be defined in the next step */
-  
+    animation: rotate 4s linear infinite;
+    /* This is going to be defined in the next step */
+
     /* [4] Tweak the appearance, and give it a nice background i.e. the world map */
     color: #000;
     border-radius: 50%;
@@ -287,46 +301,126 @@ a {
     background-size: 100% 40px, 40px 100%;
     background-position: 0 center, 50% 0;
     box-shadow: inset 20px 0 80px 6px rgba(0, 0, 0, 1);
-  
+
     /* [5] Position things in a 3d space */
     transform-style: preserve-3d;
-  }
-  #earth:after {
+}
+
+#earth:after {
     /* [1] Break the flow to show this as an overlay */
     position: absolute;
     top: 0;
     left: 0;
-  
+
     /* [2] Make it take all the space available in the box (ahem... globe!) */
     width: 100%;
     height: 100%;
-  
+
     /* [3] Make sure this has no generated content, as we want this just for fancy purposes */
     content: '';
-  
+
     /* [4] Give it some shape and shadow */
     border-radius: 50%;
-    box-shadow: -80px 15px 80px 10px rgba(0,0,0,.9) inset;
-  }
-  #earth:before {
+    box-shadow: -80px 15px 80px 10px rgba(0, 0, 0, .9) inset;
+}
+
+#earth:before {
     /* [1] Again, break the flow to show this as an overlay */
     position: absolute;
     top: 0;
     left: 0;
-  
+
     /* [2] Again, give it all the available space */
     width: 100%;
     height: 100%;
-  
+
     /* [3] Duh. */
     content: '';
-  
+
     /* [4] Add some shape and overlay effect to it */
     opacity: .2;
     border-radius: 50%;
     background: radial-gradient(circle at 100px 100px, #fff, #000);
-  }
-  @keyframes rotate {
-    0% {background-position: 0 0;}
-    100% {background-position: 630px 0;}
-  }
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 630px 0;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+@media (max-width: 767px) {
+    .canvas { visibility: hidden;}
+    .cube{ visibility: hidden;}
+    .face{ visibility: hidden;}
+}
+.canvas {
+    z-index: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    perspective: 850px;
+}
+.cube {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-origin: 50% 50% 50px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-out;
+}
+.cube .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 180px;
+    color: transparent;
+    -webkit-text-stroke: 5px white;
+}
+.cube .face:nth-child(1) {
+    transform: translateZ(100px);
+    background-color:  rgb(60, 174, 32, 30%);
+}
+.cube .face:nth-child(2) {
+    transform-origin: center right;
+    transform: rotateY(90deg);
+    background-color: rgb(246, 78, 201, 30%);
+}
+.cube .face:nth-child(3) {
+    transform-origin: center center;
+    transform: rotateY(180deg);
+    background-color:rgb(60, 174, 32, 30%);
+}
+.cube .face:nth-child(4) {
+    transform-origin: center left;
+    transform: rotateY(-90deg);
+    background-color: rgb(246, 78, 201, 30%);
+}
+.cube .face:nth-child(5) {
+    transform-origin: top center;
+    transform: rotateX(90deg);
+    background-color: rgba(34, 203, 237, 0.3);
+}
+.cube .face:nth-child(6) {
+    transform-origin: bottom center;
+    transform: rotateX(-90deg);
+    background-color: rgba(34, 203, 237, 0.3);
+}

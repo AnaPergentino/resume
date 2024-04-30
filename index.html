@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet">
     <title>Ana Carolina Pergentino</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +13,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=VT323&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
+    
         <p class="logo">AP</p>
-        <ul class="nav">
+        <ul class="nav nav-collapsed">
             <li class="navlink"><a href="#">Home</a></li>
             <li class="navlink"><a href="#skills">Skills</a></li>
-            <li class="navlink"><a href="#">About</a></li>
+            <li class="navlink"><a href="#about">About</a></li>
             <li class="navlink"><a href="#">Projects</a></li>
             <li class="navlink"><a href="#contact">Contact</a></li>
         </ul>
@@ -32,17 +34,26 @@
 
     </header>
     <div id="title-page" class="orbitron">
-        <div id="earth"></div>
-
+        <div class="canvas">
+            <div class="cube">
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+                <div class="face"></div>
+            </div>
+        </div>
         <div id="center">
             <h1>ANA <br> PERGENTINO</h1>
+
             <h2>Computer Engineer | Web Developer</h2>
         </div>
 
 
     </div>
-    <main id="mainContainer">
-        <article id="mainLeft">
+    <main>
+        <article>
             <section id="contact" class="vt323-regular">
                 <h3>CONTACT</h3>
                 <p>
@@ -93,16 +104,23 @@
                 <p>German - B2</p>
             </section>
 
-        </article>
-        <article id="mainRight">
             <section id="skills">
                 <h3>Skills</h3>
 
-                <div><p>JS</p></div><div class="skill-progress"></div>
-                <div><p>TS</p></div><div class="skill-progress"></div>
-                <div><p>Angular</p></div><div class="skill-progress"></div>
+                <div>
+                    <p>JS</p>
+                </div>
+                <div class="skill-progress"></div>
+                <div>
+                    <p>TS</p>
+                </div>
+                <div class="skill-progress"></div>
+                <div>
+                    <p>Angular</p>
+                </div>
+                <div class="skill-progress"></div>
             </section>
-            <section>
+            <section id="about">
                 <h3>ABOUT</h3>
                 <p>&emsp; I'm a Computer Engineer working in the software field, specializing in Frontend Development
                     with over 6 years of
